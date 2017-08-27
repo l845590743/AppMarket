@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/photo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_icon_bg"
+           android:padding="12dp" >
+
+            <ImageView
+                android:id="@+id/image_photo"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@mipmap/bg_photo"
+                android:padding="5dip" />
+
+            <ImageView
+                android:id="@+id/image_over"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@mipmap/photo_over" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/image_photo"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/tv_user_name"
+                    android:textColor="#2b2b2b"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_name"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="@string/tv_user_email"
+                    android:textColor="#7a7a7a"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!-- 4f4f4f -->
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#1a000000" />
+
+
+
+            <TextView
+                android:gravity="center_vertical"
+                android:drawableLeft="@mipmap/ic_home"
+                android:drawablePadding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/tv_home"
+                android:textColor="#9b9b9b"
+                android:background="@drawable/menu_item_bg"
+                android:textSize="18dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#66000000" />
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_setting"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/tv_setting"
+            android:textColor="#9b9b9b"
+            android:background="@drawable/menu_item_bg"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#66000000" />
+        <TextView
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_theme"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/tv_home"
+            android:textColor="#9b9b9b"
+            android:background="@drawable/menu_item_bg"
+            android:textSize="18dp" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#66000000" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_scans"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/tv_scans"
+            android:textColor="#9b9b9b"
+            android:background="@drawable/menu_item_bg"
+            android:textSize="18dp" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#66000000" />
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_feedback"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/tv_feedback"
+            android:textColor="#9b9b9b"
+            android:background="@drawable/menu_item_bg"
+            android:textSize="18dp" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#66000000" />
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_updates"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/tv_updates"
+            android:textColor="#9b9b9b"
+            android:background="@drawable/menu_item_bg"
+            android:textSize="18dp" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#66000000" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_about"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/tv_about"
+            android:textColor="#9b9b9b"
+            android:background="@drawable/menu_item_bg"
+            android:textSize="18dp" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#66000000" />
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_exit"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/tv_exit"
+            android:textColor="#9b9b9b"
+            android:background="@drawable/menu_item_bg"
+            android:textSize="18dp" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#66000000" />
+    </LinearLayout>
+
+</ScrollView>

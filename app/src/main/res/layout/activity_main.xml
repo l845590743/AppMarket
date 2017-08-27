@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.lzm.appmarket.PagerSlidingTab
+            android:id="@+id/pager_slidingTab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </com.lzm.appmarket.PagerSlidingTab>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/menu_list"/>
+
+    </FrameLayout>
+
+
+</android.support.v4.widget.DrawerLayout>
