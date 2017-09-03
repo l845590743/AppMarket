@@ -1,21 +1,16 @@
 package com.lzm.appmarket.fragment;
 
 import android.view.View;
-import android.widget.TextView;
 
-/**
- * Created by lxj on 2016/5/23.
- */
 public class SubjectFragment extends BaseFragment {
+
     @Override
-    protected View getSuccessView() {
-        TextView textView = new TextView(getActivity());
-        textView.setText(this.getClass().getSimpleName());
-        return textView;
+    protected View CreateSuccessView() {
+        return null;
     }
 
     @Override
-    protected Object onLoad() {
+    protected Object OnLoad() {
         return null;
     }
 }

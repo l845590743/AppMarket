@@ -1,8 +1,10 @@
-package com.lzm.appmarket;
+package com.lzm.appmarket.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.lzm.appmarket.bean.pagerInfo;
 
 import java.util.ArrayList;
 

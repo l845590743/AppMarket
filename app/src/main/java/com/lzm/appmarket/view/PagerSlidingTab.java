@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lzm.appmarket;
+package com.lzm.appmarket.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -38,6 +38,8 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.lzm.appmarket.R;
 
 import java.util.Locale;
 

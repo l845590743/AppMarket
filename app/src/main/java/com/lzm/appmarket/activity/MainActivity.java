@@ -1,4 +1,4 @@
-package com.lzm.appmarket;
+package com.lzm.appmarket.activity;
 
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -9,21 +9,26 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.lzm.appmarket.view.PagerSlidingTab;
+import com.lzm.appmarket.R;
+import com.lzm.appmarket.util.Utils;
 import com.lzm.appmarket.fragment.CategoryFragment;
 import com.lzm.appmarket.fragment.HomeFragment;
 import com.lzm.appmarket.fragment.HotFragment;
 import com.lzm.appmarket.fragment.RecommendFragment;
 import com.lzm.appmarket.fragment.SubjectFragment;
+import com.lzm.appmarket.adapter.pagerAdapter;
+import com.lzm.appmarket.bean.pagerInfo;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DrawerLayout mDrawerLayout;
+    private DrawerLayout          mDrawerLayout;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
-    private PagerSlidingTab mPagerSlidingTab;
-    private ViewPager mViewpager;
-    private ArrayList<pagerInfo> mList;
+    private PagerSlidingTab       mPagerSlidingTab;
+    private ViewPager             mViewpager;
+    private ArrayList<pagerInfo>  mList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

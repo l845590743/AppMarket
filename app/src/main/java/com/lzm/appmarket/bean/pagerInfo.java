@@ -1,4 +1,4 @@
-package com.lzm.appmarket;
+package com.lzm.appmarket.bean;
 
 import android.support.v4.app.Fragment;
 

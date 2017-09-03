@@ -10,12 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.lzm.appmarket.PagerSlidingTab
+        <com.lzm.appmarket.view.PagerSlidingTab
             android:id="@+id/pager_slidingTab"
             android:layout_width="match_parent"
             android:layout_height="50dp">
 
-        </com.lzm.appmarket.PagerSlidingTab>
+        </com.lzm.appmarket.view.PagerSlidingTab>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"

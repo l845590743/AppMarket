@@ -1,4 +1,4 @@
-package com.lzm.appmarket;
+package com.lzm.appmarket.comment;
 
 import android.app.Application;
 import android.content.Context;
