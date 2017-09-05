@@ -9,8 +9,4 @@ public class SubjectFragment extends BaseFragment {
         return null;
     }
 
-    @Override
-    protected Object OnLoad() {
-        return null;
-    }
 }

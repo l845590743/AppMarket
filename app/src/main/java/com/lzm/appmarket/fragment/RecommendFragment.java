@@ -13,8 +13,4 @@ public class RecommendFragment extends BaseFragment {
         return textView;
     }
 
-    @Override
-    protected Object OnLoad() {
-        return null;
-    }
 }

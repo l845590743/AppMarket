@@ -13,7 +13,7 @@ public class CategoryFragment extends BaseFragment {
     }
 
     @Override
-    protected Object OnLoad() {
-        return null;
+    protected void OnLoad() {
+
     }
 }

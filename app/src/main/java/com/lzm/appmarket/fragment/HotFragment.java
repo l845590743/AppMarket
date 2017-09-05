@@ -13,8 +13,4 @@ public class HotFragment extends BaseFragment {
         return textView;
     }
 
-    @Override
-    protected Object OnLoad() {
-        return null;
-    }
 }

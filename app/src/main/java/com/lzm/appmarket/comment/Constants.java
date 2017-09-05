@@ -123,4 +123,8 @@ public class Constants {
         String ts = tsLong.toString();
         return ts;
     }
+
+    public static String getURL() {
+        return "http://api.shu.le-miao.com/index.php/Home/Time/index";
+    }
 }

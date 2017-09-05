@@ -12,8 +12,4 @@ public class HomeFragment extends BaseFragment {
         return textView;
     }
 
-    @Override
-    protected Object OnLoad() {
-        return null;
-    }
 }

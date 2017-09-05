@@ -38,7 +38,7 @@ public abstract class LoadingPage extends FrameLayout {
         STATE_ERROR
     }
 
-    private PageState mState = PageState.STATE_LOADING; //默认是加载中的状态
+    private static PageState mState = PageState.STATE_LOADING; //默认是加载中的状态
 
     private View loadingView;//加载中的View
     private View successView;//加载数据成功的View
@@ -63,7 +63,7 @@ public abstract class LoadingPage extends FrameLayout {
                         mState = PageState.STATE_LOADING;
                         showPage();
                         //2.重新加载
-                        getData();
+                        reGetData();
                     } else {
                         Toast.makeText(getContext(),"请打开网络再试",Toast.LENGTH_SHORT).show();
                     }
@@ -118,8 +118,8 @@ public abstract class LoadingPage extends FrameLayout {
             if (mLoadThread == null) {
                 return;
             }
-            Object object = getData();
-            checkData(object);
+//            Object object = getData();
+//            checkData(object);
             Utils.runOnUIThread(new Runnable() {
                 @Override
                 public void run() {
@@ -132,7 +132,7 @@ public abstract class LoadingPage extends FrameLayout {
     /**
      * 根据返回的对象 判断其对应的界面
      */
-    public PageState checkData(Object data) {
+    public PageState checkData(Object data,int mStatus) {
         if (data == null) {
             return PageState.STATE_ERROR;
         } else {
@@ -141,6 +141,10 @@ public abstract class LoadingPage extends FrameLayout {
                 if (list.size() == 0) {
                     return PageState.STATE_ERROR;
                 }
+            }
+
+            if (mStatus != 1) {
+                return PageState.STATE_ERROR;
             }
             return PageState.STATE_SUCCESS;
         }
@@ -169,11 +173,24 @@ public abstract class LoadingPage extends FrameLayout {
         }
     }
 
+    public static void setLoadingPage(boolean isShow) {
+        if (isShow) {
+            mState = PageState.STATE_SUCCESS;
+        }
+    }
+
     /**
-     * 抽取接收每个界面请求的数据对象，具体怎么请求不用管，由子类去实现
+     * 由子类去获取每个界面需要得数据
      * @return
      */
-    protected abstract Object getData();
+    protected abstract void getData();
+
+
+    /**
+     * 数据返回失败 重新去获取
+     * @return
+     */
+    protected abstract void reGetData();
 
     /**
      * 获取successView，每个界面的successView都不一样，需要由每个子类
@@ -181,4 +198,5 @@ public abstract class LoadingPage extends FrameLayout {
      * @return
      */
     protected abstract View getSuccessView();
+
 }

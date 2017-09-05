@@ -23,8 +23,13 @@ public abstract class BaseFragment extends Fragment {
         if (mLoadingPage == null) {
             mLoadingPage = new LoadingPage(getActivity()) {
                 @Override
-                protected Object getData() {
-                    return OnLoad();
+                protected void getData() {
+                    OnLoad();
+                }
+
+                @Override
+                protected void reGetData() {
+                    OnResetLoad();
                 }
 
                 @Override
@@ -39,28 +44,22 @@ public abstract class BaseFragment extends Fragment {
     protected Handler bHandler = new Handler() {
         public void handleMessage(android.os.Message msg) {
 
+            int status = msg.arg1;
+
             if (mLoadingPage != null) {
-                mLoadingPage.checkData(msg.obj);
+                mLoadingPage.checkData(msg.obj,status);
                 mLoadingPage.showPage();
             }
             if (null != msg.obj) {
-                ResHeadAndBody response = (ResHeadAndBody) msg.obj;
-
-                int status = response.getHeader().getRetStatus();
-
-                if (status == 0) {
-                    onHttpResponse(msg.what, response.getBody(),0);
-                } else {
-                    onHttpResponse(msg.what, response, status);
-                }
+                onHttpResponse(msg.what, msg.obj,status);
             } else {
-                onHttpResponse(msg.what, null, msg.arg1);
+                onHttpResponse(msg.what, null,status);
             }
         }
     };
 
 
-    protected void onHttpResponse(int requestType, Object response,int errorCode) {
+    protected void onHttpResponse(int requestType, Object response,int responseStatus) {
 
     }
 
@@ -74,5 +73,16 @@ public abstract class BaseFragment extends Fragment {
      * 获取数据，由子类去实现
      * @return
      */
-    protected abstract Object OnLoad();
+    protected  void OnLoad() {
+
+    }
+
+    /**
+     * 获取数据，由子类去实现
+     * @return
+     */
+    protected  void OnResetLoad() {
+
+    }
+
 }
